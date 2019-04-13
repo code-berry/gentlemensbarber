@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gentlemen's Barber London</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel:700|PT+Sans:400,700" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<nav class="navbar nav navbar-expand-md navbar-light">
+		<div class="container">
+			<h6 id="logo"><i class="icon icon-scissors"></i>Gentlemen's Barber</h6>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+				  	<li><a href="home.html" class="head-li">Home</a></li>
+					<li><a href="home.html#about" class="head-li">About</a></li>
+					<li><a href="locations.html" class="head-li">Locations</a></li>
+					<li><a href="contact.html" class="head-li">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</head>
+<body>
+
+<div class="container-fluid" id="mapholder">
+	<div id="map"></div>
+</div>
+
+<div id="footer">
+	<div class="container">
+		<ul>
+			<li><a href="/contact" class="head-li">Home</a></li>
+			<li><a href="#about" class="head-li">About</a></li>
+			<li><a href="/locations" class="head-li">Locations</a></li>
+			<li><a href="/contact" class="head-li">Contact</a></li>
+		</ul>
+		<img src="images/cb.png" alt="codeberry" id="codeberry">
+	</div>
+	<h6>Copyright &copy; 2019 | Gentlemen's Barber London | <a href="https://www.codeberry.ca">Codeberry</a></h6>
+</div>
+
+<script>
+function initMap() {
+	let london = {lat: 42.999722, lng: -81.264531};
+	let map = new google.maps.Map(
+	document.getElementById('map'), {zoom: 12, center: london})
+
+	let markers = [
+		{
+		 coords:{lat: 42.984337, lng: -81.292474},
+		 content:'<h3>Oxford Location</h3><hr><p>Sunday: 11am-5pm</p><br><p>Mon-Sat: 10am-9pm</p>'
+		},
+		{
+		 coords:{lat: 43.026417, lng: -81.277562},
+		 content:'<h3>Masonville Location</h3><hr><p>Sunday: 12pm-5pm</p><br><p>Mon-Sat: 9am-9pm</p>'
+		}
+	];
+
+	for (let i=0;i<markers.length;i++) {
+		addMarker(markers[i]);
+	}
+	
+	function addMarker(props) {
+		let marker = new google.maps.Marker({
+			position: props.coords,
+			map: map,})
+
+		if (props.content) {
+			var infoWindow = new google.maps.InfoWindow({
+				content: props.content
+			});
+		}
+		marker.addListener('click', ()=> {
+			infoWindow.open(map, marker);
+		});
+	}
+}
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfhoQmxE5KmU0LBQkI3dI-ROqcO2Wvp6g&callback=initMap"
+type="text/javascript"></script>
+
+</body>
+</html>

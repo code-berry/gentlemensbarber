@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gentlemen's Barber London</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel:700|PT+Sans:400,700" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<nav class="navbar nav navbar-expand-md navbar-light">
+		<div class="container">
+			<h6 id="logo"><i class="icon icon-scissors"></i>Gentlemen's Barber</h6>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+				  	<li><a href="#" class="head-li">Home</a></li>
+					<li><a href="home.html#aboutUs" class="head-li">About</a></li>
+					<li><a href="locations.html" class="head-li">Locations</a></li>
+					<li><a href="contact.html" class="head-li">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</head>
+<body>
+
+<div class="container-fluid" id="home-s1">
+	<div class="container">
+		<h1 data-aos="fade" data-aos-duration="1500">We like making you look good.</h1>
+		<a href="https://www.instagram.com/gentlemensbarberlondon" data-aos="fade" data-aos-duration="1500"><button>Our Instagram</button></a>
+		<div id="box">
+			<div class="row" id="locations">
+				<div class="col">
+					<h2>West London</h2>
+					<hr>
+					<h6>551 Oxford Street West</h6>
+					<h6>(519) 657-0005</h6>
+					<h6 id="td1">Todays hours: <%= hours[0] %></h6>
+					<h6 class="more1">Full hours</h6>
+				</div>
+				<div class="col">
+					<a id="aboutUs"></a>
+					<h2>Masonville</h2>
+					<hr>
+					<h6>1680 Richmond Street</h6>
+					<h6>(519) 645-6432</h6>
+					<h6 id="td2">Todays hours: <%= hours[1] %></h6>
+					<h6 class="more2">Full hours</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid" id="home-s2">
+	<div class="container" id="about" data-aos="fade-up">
+		<h1 class="h-heading">About Us</h1>
+		<hr>
+		<p class="h-para">The Gentlemen's Barber was opened in October of 2000. We have a team of 11 very talented barbers. Find your nearest location <a href="location.html">here.</a> and call to book an appointment. We can't wait to cut your hair!
+	</div>
+</div>
+
+<div id="photo-holder">
+	<div class="container">
+		<div class="row photo-row">
+			<div class="col" id="gb-p1"></div>
+			<div class="col" id="gb-p2"></div>
+			<div class="col" id="gb-p3"></div>
+			<div class="col" id="gb-p4"></div>
+		</div>
+		<div class="row photo-row">
+			<div class="col" id="gb-p5"></div>
+			<div class="col" id="gb-p6"></div>
+			<div class="col" id="gb-p7"></div>
+			<div class="col" id="gb-p8"></div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid" id="home-s3">
+	<div class="container" data-aos="fade-right">
+		<h1 class="h-heading">Services</h1>
+		<ul>
+			<li class="h-para">Haircut</li>
+			<li class="h-para">Haircut & Shave</li>
+			<li class="h-para">Boy's Haircut</li>
+			<li class="h-para">Shave</li>
+			<li class="h-para">Beard Trim</li>
+			<li class="h-para">Highlights</li>
+		</ul>
+		<h5 class="h-hst">HST INCLUDED</h5>
+	</div>
+</div>
+
+
+<div id="footer">
+	<div class="container">
+		<ul>
+			<li><a href="home.html" class="head-li">Home</a></li>
+			<li><a href="home.html#aboutUs" class="head-li">About</a></li>
+			<li><a href="locations.html" class="head-li">Locations</a></li>
+			<li><a href="contact.html" class="head-li">Contact</a></li>
+		</ul>
+		<a href="https://www.codeberry.ca/"><img src="images/cb.png" alt="codeberry" id="codeberry"></a>
+	</div>
+	<h6>Copyright &copy; 2019 | Gentlemen's Barber London | <a href="https://www.codeberry.ca">Codeberry</a></h6>
+</div>
+
+<div id="popUpThing">
+	<div id="closer"></div>
+	<div id="imgBox"></div>
+</div>
+
+
+
+<!-- <script>
+	AOS.init();
+	let td1 = $('#td1');
+	let more1 = $('.more1');
+	let td2 = $('#td2');
+	let more2 = $('.more2');
+	more1.click(function() {
+		more1.removeClass('more1');
+		more1.text('Mon-Sat: 10am-9pm');
+		td1.text('Sunday: 11am-5pm');
+	});
+	more2.click(function() {
+		more2.removeClass('more2');
+		more2.text('Mon-Sat: 9am-9pm');
+		td2.text('Sunday: 12pm-5pm');
+	});
+</script> -->
+
+<script>
+	AOS.init();
+
+	let td1 = $('#td1');
+	let more1 = $('.more1');
+	let td2 = $('#td2');
+	let more2 = $('.more2');
+
+	$(document).ready(()=> {
+		more1.removeClass('more1');
+		more1.text('Mon-Sat: 10am-9pm');
+		td1.text('Sunday: 11am-5pm');
+		more2.removeClass('more2');
+		more2.text('Mon-Sat: 9am-9pm');
+		td2.text('Sunday: 12pm-5pm');
+		$('.head-li').click(()=> {
+			$('.navbar-toggler').click();
+		});
+		// $('#s-button').click(()=> {
+		// 	window.scrollTo(0,document.body.scrollHeight);
+		// }); unneeded
+		$('#closer').click(()=> {
+			$('#popUpThing').fadeOut();
+		});
+	});
+
+	let lastScroll = 0;
+	$(window).scroll((event)=> {
+		let st = $(this).scrollTop();
+		if (st === 0) {
+			$('nav').removeClass('solidBrah');
+		} else if (st > lastScroll) {
+			$('nav').addClass('solidBrah');
+		}
+		lastScroll = st;
+	});
+
+	let pics = ['#gb-p1', '#gb-p2', '#gb-p3', '#gb-p4', '#gb-p5', '#gb-p6', '#gb-p7', '#gb-p8'];
+
+	for (let i=0; i<pics.length; i++) {
+		let thisPic = pics[i];
+		$(thisPic).click(()=> {
+			let imgUrl = thisPic[4] + thisPic[5];
+			let fullUrl = "url('../images/" + imgUrl + ".jpg')";
+			console.log(fullUrl);
+			$('#imgBox').css('background-image', fullUrl);
+			$('#popUpThing').fadeIn();
+		});
+	}
+</script>

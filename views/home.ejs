@@ -1,0 +1,67 @@
+<%- include('partials/header'); %>
+<div class="container-fluid" id="home-s1">
+	<div class="container">
+		<h1 data-aos="fade" data-aos-duration="1500">We like making you look good.</h1>
+		<a id="s-button" data-aos="fade" data-aos-duration="1500"><button >Our Services</button></a>
+		<div id="box">
+			<div class="row" id="locations">
+				<div class="col">
+					<h2>West London</h2>
+					<hr>
+					<h6>551 Oxford Street West</h6>
+					<h6>(519) 657-0005</h6>
+					<h6 id="td1">Todays hours: <%= hours[0] %></h6>
+					<h6 class="more1">Full hours</h6>
+				</div>
+				<div class="col">
+					<h2>Masonville</h2>
+					<hr>
+					<h6>1680 Richmond Street</h6>
+					<h6>(519) 645-6432</h6>
+					<h6 id="td2">Todays hours: <%= hours[1] %></h6>
+					<h6 class="more2">Full hours</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" id="home-s2">
+	<div class="container" id="about" data-aos="fade-up">
+		<h1 class="h-heading">About Us</h1>
+		<hr>
+		<p class="h-para">The Gentlemen's Barber was opened in October of 2000. We have a team of 11 very talented barbers. Find your nearest location <a href="/location">here.</a> and call to book an appointment. We can't wait to cut your hair!
+	</div>
+</div>
+<div class="container-fluid" id="home-s3">
+	<div class="container" data-aos="fade-right">
+		<h1 class="h-heading">Services</h1>
+		<ul>
+			<li class="h-para">Haircut</li>
+			<li class="h-para">Haircut & Shave</li>
+			<li class="h-para">Boy's Haircut</li>
+			<li class="h-para">Shave</li>
+			<li class="h-para">Beard Trim</li>
+			<li class="h-para">Highlights</li>
+		</ul>
+		<h5 class="h-hst">HST INCLUDED</h5>
+	</div>
+</div>
+<%- include('partials/footer') %>
+
+<script>
+	AOS.init();
+	let td1 = $('#td1');
+	let more1 = $('.more1');
+	let td2 = $('#td2');
+	let more2 = $('.more2');
+	more1.click(function() {
+		more1.removeClass('more1');
+		more1.text('Mon-Sat: 10am-9pm');
+		td1.text('Sunday: 11am-5pm');
+	});
+	more2.click(function() {
+		more2.removeClass('more2');
+		more2.text('Mon-Sat: 9am-9pm');
+		td2.text('Sunday: 12pm-5pm');
+	});
+</script>

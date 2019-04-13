@@ -1,0 +1,304 @@
+html, body {
+	margin: 0;
+	background-color: #050505 !important;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+nav {
+	position: fixed !important;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	background-color: rgba(255,255,255,0.75);
+}
+
+#logo {
+	margin: 0 !important;
+	font-size: 28px;
+	font-family: Cinzel;
+	letter-spacing: -1px;
+	line-height: 60px;
+/*	font-weight: bold;*/
+}
+
+.navbar-head {
+	height: 60px;
+}
+
+.nav ul {
+	margin-left: auto !important;
+}
+
+.nav li {
+	margin-left: 25px !important;
+}
+
+.nav li a {
+	transition: color 500ms;
+}
+
+.icon {
+	margin: 0 !important;
+}
+
+.nav li a:hover {
+	text-decoration: none !important;
+	color: #4c90ed !important;
+}
+
+hr {
+	width: 100%;
+	border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+#home-s1 {
+	height: 800px;
+	background-image: url('../images/bg01.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+
+#home-s1 h1 {
+	font-family: PT Sans;
+	font-weight: bold;
+	color: #fafafa;
+	font-size: 50px;
+}
+
+#box {
+	position: absolute;
+	bottom: 0;
+	left: 50px;
+	height: 250px;
+	width: 630px;
+	background-color: rgba(0,0,0,0.975);
+}
+
+#locations {
+	height: 100%;
+	width: 100%;
+}
+
+#locations>.col {
+	padding: 35px;
+}
+
+#locations h2 {
+	font-family: PT Sans;
+	font-weight: bold;
+	color: #cacaca;
+}
+
+#locations h6 {
+	font-family: PT Sans;
+	color: #cacaca;
+}
+
+#home-s2 {
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #202020;
+	position: relative;
+	top: -2px;
+}
+
+.h-heading {
+	font-family: PT Sans;
+	font-weight: bold;
+	font-size: 44px;
+	color: #fafafa;
+}
+
+.h-para {
+	font-family: PT Sans;
+	font-size: 24px;
+	color: #cacaca;
+}
+
+#home-s3 {
+	height: 400px;
+	background-image: url('../images/bg2.png');
+	background-size: cover;
+	display: flex;
+	align-items: center;
+}
+
+#home-s3>div {
+	padding-left: 12%;
+}
+
+.h-hst {
+	font-size: 14px;
+	margin-left: 40px;
+	color: rgba(0,0,0,0.3);
+}
+
+.head-li {
+	font-family: PT Sans;
+	color: #202020 !important;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+#home-s1 button {
+	width: 250px;
+	height: 60px;
+	background-color: #e79500;
+	border: transparent;
+	border-radius: 10px !important;
+	font-family: PT Sans;
+	color: #fafafa;
+	font-size: 20px !important;
+	margin-bottom: 100px !important;
+	transition: background-color 500ms, color 500ms;
+}
+
+#home-s1 button:hover {
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+	cursor: pointer;
+	background-color: #202020;
+	color: #e79500;
+}
+
+.more1, .more2 {
+	text-decoration: underline;
+	color: #8585ff !important;
+	cursor: pointer;
+}
+
+#footer {
+	background-color: #202020;
+	padding: 10px;
+	height: 114px;
+	position: relative;
+}
+
+#footer ul {
+	list-style: none;
+	margin: 0 !important;
+	padding: 0;
+	width: 30%;
+	float: left;
+	color: #fafafa;
+}
+
+#footer ul li a {
+	color: #fafafa !important;
+}
+
+#codeberry {
+	height: 100px;
+	float: right;
+}
+
+#footer h6 {
+	margin: 0 !important;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 15px;
+	font-family: PT Sans;
+	font-weight: bold;
+	transition: color 500ms;
+	color: #fafafa;
+}
+
+#footer h6 a {
+	transition: color 500ms;
+}
+
+#footer h6 a:hover {
+	text-decoration: none;
+	color: #aeef6e !important;
+}
+
+#map {
+	height: 80%;
+	width: 70%;
+}
+
+#mapholder {
+	height: 970px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fafafa;
+}
+
+#contact-d1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+	background-color: #fafafa;
+	text-align: center;
+}
+
+#contact-d1 h1 {
+	font-family: PT Sans;
+	font-weight: bold;
+}
+
+#contact-d1 h3 {
+	font-family: PT Sans;
+	font-weight: bold;
+}
+
+#contact-d1 p {
+	font-family: PT Sans;
+}
+
+#contact-d1 hr {
+	color: black;
+	border-color: black !important;
+	width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+	#box {
+		display: none;
+	}
+	#home-s1 button {
+		margin-bottom: 0 !important;
+	}
+	#home-s1 {
+		height: 500px;
+	} 
+	#home-s2 {
+		height: unset;
+		padding: 30px;
+	}
+	#footer h6 {
+		display: none;
+	}
+	#contact-d1 {
+		height: 1000px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#home-s2 p {
+		font-size: 20px;
+	}
+	#logo {
+		font-size: 22px;
+	}
+	#map {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#logo {
+		font-size: 14px;
+	}
+}
